@@ -21,6 +21,13 @@ pip install -r requirements.txt
 uvicorn main:app
 ``` 
 - Then, navigate to `src/ui/index.html` to test the user interface.
+- You can also test the API using `curl`:
+```
+curl -X POST "http://localhost:8000/route-customer-to-agent/" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@your_audio.wav"
+```
 
 ## Interface
 
