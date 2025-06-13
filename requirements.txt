@@ -1,0 +1,11 @@
+datasets
+evaluate
+fastapi
+numpy
+openai_whisper
+pyarrow
+SQLAlchemy
+torch
+torchaudio
+tqdm
+transformers

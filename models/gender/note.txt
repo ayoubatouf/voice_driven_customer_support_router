@@ -1,0 +1,1 @@
+download pytorch_model.bin from https://huggingface.co/alefiury/wav2vec2-large-xlsr-53-gender-recognition-librispeech

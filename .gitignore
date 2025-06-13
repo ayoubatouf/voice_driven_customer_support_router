@@ -1,0 +1,4 @@
+/models/intent/pytorch_model.bin
+/models/emotion/pytorch_model.bin
+/models/gender/pytorch_model.bin
+/models/translation/pytorch_model.bin

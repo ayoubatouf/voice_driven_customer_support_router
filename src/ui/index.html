@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Agent Matching System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Voice Agent Matching</h1>
+      <p>Describe your needs and we'll match you with the perfect customer service agent</p>
+    </header>
+    
+    <div class="panels">
+      <div class="recorder-panel">
+        <div class="panel-title">
+          <i class="fas fa-microphone"></i>
+          <h2>Voice Recorder</h2>
+        </div>
+        
+        <div class="recorder-container">
+          <div class="mic-container">
+            <button id="listenBtn" class="mic-button">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <div class="sound-wave" id="soundWave"></div>
+          </div>
+          
+          <div class="timer" id="timer">00:10</div>
+          
+          <div class="visualizer" id="visualizer"></div>
+          
+          <div class="status-container">
+            <i class="fas fa-info-circle"></i>
+            <span id="status">Press the microphone button and speak to begin</span>
+          </div>
+          
+          <div class="api-status active">
+            <i class="fas fa-circle"></i>
+            <span>API Endpoint: http://localhost:8000/route-customer-to-agent/</span>
+          </div>
+        </div>
+        
+        <div class="instructions">
+          <h4><i class="fas fa-lightbulb"></i> How it works</h4>
+          <ul>
+            <li>Click the microphone button to start listening</li>
+            <li>Describe your issue or question in a clear voice</li>
+            <li>Our AI will analyze your request and match you with the best agent</li>
+            <li>Recording stops automatically after 10 seconds</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="result-panel">
+        <div class="panel-title">
+          <i class="fas fa-user-tie"></i>
+          <h2>Matched Agent</h2>
+        </div>
+        
+        <div class="result-content" id="result">
+          <div class="no-agent">
+            <i class="fas fa-user-headset"></i>
+            <h3>No Agent Matched Yet</h3>
+            <p>Record your request to find your perfect agent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/mattdiamond/Recorderjs@master/dist/recorder.js"></script>
+  <script src="visualizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
